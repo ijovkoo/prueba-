@@ -1,0 +1,161 @@
+/* Requisito: Tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Requisito: Fondo de color claro */
+.cuerpo-pagina {
+    background-color: #f0f2f5; 
+}
+
+/* Requisito: Contenedor centrado en pantalla */
+.contenedor-centrado-pantalla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Requisito: Formulario dentro de un cuadro (card) */
+.cuadro-formulario-card {
+    background-color: #ffffff;
+    width: 350px;
+    /* Requisito: Padding (espaciado interno) */
+    padding: 30px;
+    /* Requisito: Bordes */
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Requisito: Márgenes */
+    margin: 20px;
+}
+
+/* Requisito: Logo centrado */
+.logo-centrado {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-centrado img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* Estilos de los inputs (Uso de márgenes, padding y bordes) */
+.grupo-input {
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-correo, 
+.input-contrasena {
+    width: 100%;
+    padding: 10px; /* Padding */
+    border: 1px solid #f80909; /* Bordes */
+    border-radius: 5px;
+}
+
+/* Estilo del botón */
+.boton-inicio-sesion {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.boton-inicio-sesion:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo de los links */
+.seccion-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link-recuperar-contrasena, 
+.link-registrarse {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.link-recuperar-contrasena:hover, 
+.link-registrarse:hover {
+    text-decoration: underline;
+}
+
+
+.boton {
+    width: 100%;
+    padding: 11px;
+    background-color: #e82121;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.boton:hover {
+    background-color: #ea1b1b;
+}
+.cuerpo-pagina_reg{
+    background-color: black;
+}
+
+.contenercentrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.cuadro-formulario-card{
+    background-color: darkgoldenrod;
+}
+.grupodeinput {
+    margin-bottom: 15px; /* Margen inferior */}
+
+.grupodeinput label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 17px;}
+
+
+.nombrecorre,
+.nombrecontra{
+    width: 100%;
+    padding: 10px; /* Padding */
+    border: 1px solid #f8f4f4; /* Bordes */
+    border-radius: 100px;
+}
+
+.nombredeporte{
+    background-color: coral;
+    border-radius: 100px;
+    border:0.5px #007bff;
+    padding: 16px;
+    width: 100%;
+    
+}
