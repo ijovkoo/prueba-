@@ -41,9 +41,14 @@
 }
 
 .logo-centrado img {
-    width: 80px;
-    border-radius: 50%;
+    width: 100px;
+    border-radius: 50%;}
+
+.logo-centrado img {
+    width: 250px; /* Cambia 100 por un número mayor */
+    height: auto;  /* Esto mantiene la proporción original */
 }
+
 
 /* Estilos de los inputs (Uso de márgenes, padding y bordes) */
 .grupo-input {
@@ -118,7 +123,7 @@
     background-color: #ea1b1b;
 }
 .cuerpo-pagina_reg{
-    background-color: black;
+    background-color: rgb(173, 164, 164);
 }
 
 .contenercentrado{
@@ -131,7 +136,7 @@
 }
 
 .cuadro-formulario-card{
-    background-color: darkgoldenrod;
+    background-color: rgb(246, 245, 245);
 }
 .grupodeinput {
     margin-bottom: 15px; /* Margen inferior */}
@@ -152,7 +157,7 @@
 }
 
 .nombredeporte{
-    background-color: coral;
+    background-color: rgb(255, 255, 255);
     border-radius: 100px;
     border:0.5px #007bff;
     padding: 16px;

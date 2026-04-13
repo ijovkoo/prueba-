@@ -1,0 +1,181 @@
+/* --- RESET BÁSICO (Importante para quitar márgenes por defecto) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Usamos una fuente moderna y negrita */
+    background-color: #f1f3f6; /* El color de fondo claro de la foto */
+    color: #333;
+    overflow-x: hidden; /* Evita scrolls horizontales raros */
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Links a la izq, logo a la der */
+    align-items: center;
+    padding: 30px 10%; /* Mucho margen lateral */
+    position: absolute; /* Para que flote sobre el contenido */
+    top: 0;
+    z-index: 10;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #aaa; /* Color gris suave como en la foto */
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logo-placeholder img {
+    width: 150px; /* Ajusta el tamaño de tu logo */
+    border-radius: 25%;
+}
+
+/* --- CONTENIDO PRINCIPAL (FLEXBOX) --- */
+.contenedor-principal {
+    display: flex;
+    min-height: 100vh; /* Ocupa todo el alto de la pantalla */
+    width: 100%;
+}
+
+/* --- COLUMNA DE TEXTO (IZQUIERDA) --- */
+.columna-texto {
+    flex: 1; /* Ocupa la mitad del ancho */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto verticalmente */
+    padding: 100px 10% 50px 10%; /* Margen lateral grande (10%) */
+    text-align: left;
+}
+
+.nombres-grandes h1 {
+    font-size: 50px; /* TAMAÑO GRANDE como en la foto */
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.nombres-grandes h2 {
+    font-size: 24px;
+    color: #1a1a1a;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* Línea azul separadora */
+.nombres-grandes::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #55acee; /* El azul claro de la foto */
+    margin-bottom: 30px;
+}
+
+.descripcion-tienda {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    max-width: 500px; /* Evita que el texto se estire mucho */
+    margin-bottom: 30px;
+}
+
+/* --- CITA MOTIVACIONAL (CON LÍNEA ROJA) --- */
+.mensaje-motivacional {
+    border-left: 5px solid #e74c3c; /* Línea roja gruesa a la izquierda */
+    padding-left: 20px;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.mensaje-motivacional p {
+    font-size: 16px;
+    color: #a23d93; /* El color rojo deportivo de la foto */
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* --- BOTÓN READ MORE --- */
+.boton-accion {
+    display: inline-block;
+    background-color: #e73ce4; /* Fondo rojo */
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 30px; /* Bordes muy redondeados */
+    font-weight: bold;
+    font-size: 14px;
+    width: fit-content; /* El botón solo ocupa lo que mide el texto */
+    transition: 0.3s;
+}
+
+.boton-accion::after {
+    content: ' >'; /* Añade la flecha */
+}
+
+.boton-accion:hover {
+    background-color: #c0be2b;
+    transform: scale(1.05);
+}
+
+/* --- COLUMNA DE IMAGEN (DERECHA) --- */
+.columna-imagen {
+    flex: 1; /* Ocupa la otra mitad del ancho */
+    
+    /* ¡AQUÍ ESTÁ LA MAGIA! */
+    background-image: url('https://img.freepik.com/free-vector/sport-landing-page_23-2148564072.jpg'); 
+    background-size: contain; /* La imagen se ajusta sin cortarse ni estirarse */
+    background-position: center bottom; /* Se alinea abajo y al centro */
+    background-repeat: no-repeat; /* No se repite */
+    
+    /* El fondo abstracto gris azulado detrás de la ilustración */
+    background-color: #ffee00; 
+    border-radius: 0 0 0 100px; /* Un pequeño redondeado en la esquina inferior izq */
+}
+/* Sección Dashboard Único */
+.seccion-dashboard-unico {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+}
+
+.divisor {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    margin-bottom: 30px;
+}
+
+.contenido-dashboard p {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-dashboard-total {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border: 2px solid #1a1a1a;
+    transition: 0.4s ease;
+}
+
+.btn-dashboard-total:hover {
+    background-color: transparent;
+    color: #1a1a1a;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}

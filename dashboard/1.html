@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportClub - Dashboards</title>
+    <link rel="stylesheet" href="12.css">
+</head>
+<body class="role-user">
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-izquierda">
+                <a href="../landagepagee/landajepage.html">
+                    <img src="../sport7.png" alt="Logo de la empresa" class="logo-img">
+                </a>
+            </div>
+            <div class="logo_placeholder" href="../sport7.png">
+                <strong>SPORTCLUB</strong>
+            </div>
+            <nav class="main-nav">
+                <a href="../landagepagee/landajepage.html" class="nav-item user-only">Inicio</a> 
+                <a href="#" class="nav-item user-only">Clases</a>
+                <a href="#" class="nav-item user-only">Reservas</a>
+                <a href="#" class="nav-item user-only">Mi Progreso</a>
+
+                <a href="#" class="nav-item coach-only">Inicio</a>
+                <a href="#" class="nav-item coach-only">Mis Alumnos</a>
+                <a href="#" class="nav-item coach-only">Mi Horario</a>
+                <a href="#" class="nav-item coach-only">Reportes</a>
+
+                <a href="#" class="nav-item admin-only">Inicio</a>
+                <a href="#" class="nav-item admin-only">Usuarios</a>
+                <a href="#" class="nav-item admin-only">Estadísticas</a>
+                <a href="#" class="nav-item admin-only">Configuración</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn btn-outline">Editar Perfil</button>
+                <button class="btn btn-solid">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="dashboard-section user-only">
+            <h1>Bienvenido a SportClub</h1>
+            <div class="grid-layout">
+                <div class="card">
+                    <h3>Mi Perfil</h3>
+                    <div class="flex-profile">
+                        <div class="avatar"></div>
+                        <div>
+                            <p>Nombre: <input type="text" placeholder="Héctor"></p>
+                            <p>Email: <input type="text" placeholder="hector@inacap.cl"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Progreso</h3>
+                    <div class="progress-circle">30%</div>
+                </div>
+                <div class="card card-full">
+                    <h3>Clases Disponibles</h3>
+                    <table class="data-table">
+                        <tr><td>Spinning</td><td>Lunes 18:00</td><td><button class="btn-action">Reservar</button></td></tr>
+                        <tr><td>CrossFit</td><td>Miércoles 10:00</td><td><button class="btn-action">Reservar</button></td></tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-section coach-only">
+            <h1>Panel de Entrenador</h1>
+            <p>Bienvenido, Coach [Nombre]</p>
+            <div class="grid-layout">
+                <div class="card">
+                    <h3>Mis Alumnos</h3>
+                    <table class="data-table">
+                        <tr><td>Alumno 1</td><td><button class="btn-action">Ver Progreso</button></td></tr>
+                        <tr><td>Alumno 2</td><td><button class="btn-action">Ver Progreso</button></td></tr>
+                    </table>
+                </div>
+                <div class="card card-full">
+                    <h3>Mi Horario</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Spinning</td><td>-</td><td>CrossFit</td><td>-</td><td>Boxeo</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-section admin-only">
+            <h1>Panel de Administración</h1>
+            <div class="grid-layout">
+                <div class="card">
+                    <h3>Gestión de Usuarios</h3>
+                    <input type="text" placeholder="Buscar usuario..." class="search-input">
+                    <table class="data-table">
+                        <tr><td>Admin Héctor</td><td><button class="btn-action">Editar</button></td></tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h3>Reportes Generales</h3>
+                    <button class="btn-action">Descargar Informe Mensual</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div style="position: fixed; bottom: 20px; right: 20px; background: #333; padding: 10px; border-radius: 8px;">
+        <p style="color: white; font-size: 10px; margin-bottom: 5px;">Cambiar Perfil:</p>
+        <button onclick="document.body.className='role-user'">User</button>
+        <button onclick="document.body.className='role-coach'">Coach</button>
+        <button onclick="document.body.className='role-admin'">Admin</button>
+    </div>
+
+</body>
+</html>
