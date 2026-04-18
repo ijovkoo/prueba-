@@ -179,3 +179,45 @@ body {
     color: #1a1a1a;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
 }
+.mensaje-motivacional {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    color: #333;
+}
+
+.mensaje-motivacional h3 {
+    color: #1a1a1a;
+    border-bottom: 2px solid #e14dff; /* Una línea sutil bajo el título */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.mensaje-motivacional ul {
+    list-style: none; /* Quitamos el punto negro */
+    padding: 0;
+}
+
+.mensaje-motivacional li {
+    margin-bottom: 15px; /* Espacio entre puntos para que no se amontonen */
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+}
+
+/* Este es el "punto" nuevo: una barrita vertical de color */
+.mensaje-motivacional li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 4px;
+    height: 80%;
+    background-color: #ff4d4d; /* El color de SportClub */
+    border-radius: 2px;
+}
+
+.mensaje-motivacional li strong {
+    color: #000;
+    font-weight: 600;
+}

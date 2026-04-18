@@ -16,7 +16,7 @@
                 </a>
             </div>
             <div class="logo_placeholder" href="../sport7.png">
-                <strong>SPORTCLUB</strong>
+
             </div>
             <nav class="main-nav">
                 <a href="../landagepagee/landajepage.html" class="nav-item user-only">Inicio</a> 
@@ -50,10 +50,10 @@
                 <div class="card">
                     <h3>Mi Perfil</h3>
                     <div class="flex-profile">
-                        <div class="avatar"></div>
+                    <img src="Animación.jpeg" class="avatar" alt="Foto de Perfil" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
                         <div>
-                            <p>Nombre: <input type="text" placeholder="Héctor"></p>
-                            <p>Email: <input type="text" placeholder="hector@inacap.cl"></p>
+                            <h3> Juan Pérez</h3>
+                            <p>Miembro desde: Enero 2023</p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                             <tr><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Spinning</td><td>-</td><td>CrossFit</td><td>-</td><td>Boxeo</td></tr>
+                            <tr><td>Spinning</td><td>Futbol</td><td>CrossFit</td><td>-</td><td>Boxeo</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -97,30 +97,78 @@
         </section>
 
         <section class="dashboard-section admin-only">
-            <h1>Panel de Administración</h1>
-            <div class="grid-layout">
-                <div class="card">
-                    <h3>Gestión de Usuarios</h3>
-                    <input type="text" placeholder="Buscar usuario..." class="search-input">
-                    <table class="data-table">
-                        <tr><td>Admin Héctor</td><td><button class="btn-action">Editar</button></td></tr>
-                    </table>
+    <h1>Panel de Administración <span style="font-size:1.2em;vertical-align:middle;">&#128295;</span></h1>
+    <div class="grid-layout">
+        <div class="card">
+            <h3>Gestión de Usuarios <span style="font-size:1em;">&#128100;</span></h3>
+            <div style="display:flex; gap:10px; align-items:center; margin-bottom:10px;">
+                <input type="text" placeholder="Buscar usuario..." class="search-input" style="flex:1;">
+                <button class="btn-action" title="Agregar usuario" style="background:#4caf50;color:white;">+ Agregar</button>
+            </div>
+            <div style="display:flex; align-items:center; gap:20px; margin-bottom:15px;">
+                <div class="progress-circle admin-progress">
+                    <span class="progress-text">45%</span>
                 </div>
-                <div class="card">
-                    <h3>Reportes Generales</h3>
-                    <button class="btn-action">Descargar Informe Mensual</button>
+                <div>
+                    <strong>Reputacion:</strong><br>
+                    <span style="font-size:13px; color:#4caf50;">La reputacion ha crecido un 45% este mes</span>
                 </div>
             </div>
-        </section>
+            <table class="data-table">
+                <tr><th>Nombre</th><th>Acciones</th></tr>
+                <tr>
+                    <td>Admin Héctor</td>
+                    <td>
+                        <button class="btn-action" title="Editar usuario" style="background:#2196f3;color:white;">Editar</button>
+                        <button class="btn-action" title="Eliminar usuario" style="background:#f44336;color:white;">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Admin Laura</td>
+                    <td>
+                        <button class="btn-action" title="Editar usuario" style="background:#2196f3;color:white;">Editar</button>
+                        <button class="btn-action" title="Eliminar usuario" style="background:#f44336;color:white;">Eliminar</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h3>Reportes Generales <span style="font-size:1em;">&#128202;</span></h3>
+            <ul style="margin-bottom:15px;">
+                <li>Informe Mensual <button class="btn-action" style="background:#673ab7;color:white;">Descargar</button></li>
+                <li>Informe de Usuarios <button class="btn-action" style="background:#009688;color:white;">Descargar</button></li>
+            </ul>
+            <button class="btn-action" style="background:#607d8b;color:white;">Ver Estadísticas</button>
+        </div>
+    </div>
+</section>
 
     </main>
 
-    <div style="position: fixed; bottom: 20px; right: 20px; background: #333; padding: 10px; border-radius: 8px;">
-        <p style="color: white; font-size: 10px; margin-bottom: 5px;">Cambiar Perfil:</p>
-        <button onclick="document.body.className='role-user'">User</button>
-        <button onclick="document.body.className='role-coach'">Coach</button>
-        <button onclick="document.body.className='role-admin'">Admin</button>
+    <div class="profile-switcher">
+        <p style="color: var(--primary-color); font-size: 12px; margin-bottom: 8px; font-weight: bold; letter-spacing: 1px;">Cambiar Perfil:</p>
+        <div style="display:flex; gap:6px;">
+            <button id="btn-user" onclick="switchProfile('role-user')">Usuario</button>
+            <button id="btn-coach" onclick="switchProfile('role-coach')">Coach</button>
+            <button id="btn-admin" onclick="switchProfile('role-admin')">Admin</button>
+        </div>
     </div>
+    <script>
+    function switchProfile(role) {
+        document.body.className = role;
+        document.querySelectorAll('.profile-switcher button').forEach(btn => btn.classList.remove('active'));
+        if(role==='role-user') document.getElementById('btn-user').classList.add('active');
+        if(role==='role-coach') document.getElementById('btn-coach').classList.add('active');
+        if(role==='role-admin') document.getElementById('btn-admin').classList.add('active');
+    }
+    // Marcar activo al cargar
+    window.addEventListener('DOMContentLoaded',()=>{
+        const role = document.body.className;
+        if(role==='role-user') document.getElementById('btn-user').classList.add('active');
+        if(role==='role-coach') document.getElementById('btn-coach').classList.add('active');
+        if(role==='role-admin') document.getElementById('btn-admin').classList.add('active');
+    });
+    </script>
 
 </body>
 </html>

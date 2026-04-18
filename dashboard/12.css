@@ -21,7 +21,15 @@ body.role-user {
 body.role-coach {
     --primary-color: #28a745; /* Verde */
     --accent-color: #eafaf1;
-}
+        border: 5px solid var(--primary-color);
+    }
+    .progress-text {
+        position: absolute;
+        color: #333;
+    }
+    .admin-progress {
+      background: conic-gradient(#4caf50 0% 45%, #e0e0e0 45% 100%);
+    }
 body.role-admin {
     --primary-color: #6f42c1; /* Morado/Rojo */
     --accent-color: #f3f0fa;
@@ -60,7 +68,40 @@ body.role-admin a.admin-only { display: inline; }
 
 /* DASHBOARD LAYOUT */
 .grid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-.card { background: white; padding: 20px; border-radius: 10px; shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.card {
+    background: white;
+    padding: 24px 20px 20px 20px;
+    border-radius: 28px;
+    box-shadow: 0 4px 24px 0 rgba(111,66,193,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.06);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+body.role-admin .card {
+    background: linear-gradient(135deg, #6f42c1 80%, #f3f0fa 100%);
+    color: #fff;
+    border: 2px solid #6f42c1;
+}
+body.role-user .card {
+    background: linear-gradient(135deg, #0056b3 80%, #e7f1ff 100%);
+    color: #fff;
+    border: 2px solid #0056b3;
+}
+body.role-coach .card {
+    background: linear-gradient(135deg, #28a745 80%, #eafaf1 100%);
+    color: #fff;
+    border: 2px solid #28a745;
+}
+.card h3, .card h1, .card h2 {
+    color: inherit;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+.progress-circle, .admin-progress {
+    box-shadow: 0 2px 8px 0 rgba(111,66,193,0.15);
+    border: 4px solid #fff;
+}
+.admin-progress {
+    background: conic-gradient(#fff 0% 55%, #6f42c1 55% 100%);
+    color: #6f42c1;
+}
 .card-full { grid-column: span 2; }
 h1 { margin-bottom: 10px; }
 h3 { margin-bottom: 15px; border-bottom: 2px solid var(--accent-color); padding-bottom: 5px; }
@@ -68,7 +109,75 @@ h3 { margin-bottom: 15px; border-bottom: 2px solid var(--accent-color); padding-
 /* TABLAS Y OTROS */
 .data-table { width: 100%; border-collapse: collapse; }
 .data-table td, .data-table th { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
-.btn-action { background: #eee; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+.btn-action { background: #eee; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; transition: background 0.3s, color 0.3s; }
+.profile-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    box-shadow: 0 2px 12px 0 rgba(111,66,193,0.18);
+    padding: 16px 18px 12px 18px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 170px;
+    z-index: 1000;
+    border: 2px solid var(--primary-color);
+    transition: border 0.3s;
+}
+.profile-switcher button {
+    margin: 0 4px 0 0;
+    border-radius: 16px;
+    border: none;
+    padding: 7px 16px;
+    font-weight: bold;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+.profile-switcher button:last-child { margin-right: 0; }
+
+body.role-user .profile-switcher { border-color: #0056b3; }
+body.role-coach .profile-switcher { border-color: #28a745; }
+body.role-admin .profile-switcher { border-color: #6f42c1; }
+body.role-user .profile-switcher button { background: #0056b3; color: #fff; }
+body.role-coach .profile-switcher button { background: #28a745; color: #fff; }
+body.role-admin .profile-switcher button { background: #6f42c1; color: #fff; }
+body.role-user .profile-switcher button.active {
+    box-shadow: 0 0 0 3px #0056b344;
+    border: 2px solid #fff;
+    outline: none;
+}
+body.role-coach .profile-switcher button.active {
+    box-shadow: 0 0 0 3px #28a74544;
+    border: 2px solid #fff;
+    outline: none;
+}
+body.role-admin .profile-switcher button.active {
+    box-shadow: 0 0 0 3px #6f42c144;
+    border: 2px solid #fff;
+    outline: none;
+}
 .avatar { width: 50px; height: 50px; background: #ccc; border-radius: 50%; margin-right: 15px; }
 .flex-profile { display: flex; align-items: center; }
-.progress-circle { width: 80px; height: 80px; border: 5px solid var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+.progress-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--primary-color) 0% 30%,
+        #e0e0e0 30% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.2em;
+    }
+    .progress-text {
+    position: absolute;
+    color: #333;
+    }
