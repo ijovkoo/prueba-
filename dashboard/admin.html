@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportClub - Admin</title>
+    <link rel="stylesheet" href="12.css">
+</head>
+<body class="role-admin">
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-izquierda">
+                <a href="../landagepagee/landajepage.html">
+                    <img src="../sport7.png" alt="Logo de la empresa" class="logo-img">
+                </a>
+            </div>
+            <div class="logo_placeholder" href="../sport7.png"></div>
+            <nav class="main-nav">
+                <a href="../landagepagee/landajepage.html" class="nav-item">Inicio</a>
+                <a href="#" class="nav-item">Usuarios</a>
+                <a href="#" class="nav-item">Estadísticas</a>
+                <a href="#" class="nav-item">Configuración</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">Editar Perfil</button>
+                <button class="btn btn-solid">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="dashboard-section">
+            <h1>Panel de Administración <span style="font-size:1.2em;vertical-align:middle;">&#128295;</span></h1>
+            <div class="grid-layout">
+                <div class="card">
+                    <h3>Gestión de Usuarios <span style="font-size:1em;">&#128100;</span></h3>
+                    <div style="display:flex; gap:10px; align-items:center; margin-bottom:10px;">
+                        <input type="text" placeholder="Buscar usuario..." class="search-input" style="flex:1;">
+                        <button class="btn-action" title="Agregar usuario" style="background:#4caf50;color:white;">+ Agregar</button>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:20px; margin-bottom:15px;">
+                        <div class="progress-circle admin-progress">
+                            <span class="progress-text">45%</span>
+                        </div>
+                        <div>
+                            <strong>Reputacion:</strong><br>
+                            <span style="font-size:13px; color:#4caf50;">La reputacion ha crecido un 45% este mes</span>
+                        </div>
+                    </div>
+                    <table class="data-table">
+                        <tr><th>Nombre</th><th>Acciones</th></tr>
+                        <tr>
+                            <td>Admin Héctor</td>
+                            <td>
+                                <button class="btn-action" title="Editar usuario" style="background:#2196f3;color:white;">Editar</button>
+                                <button class="btn-action" title="Eliminar usuario" style="background:#f44336;color:white;">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Admin Laura</td>
+                            <td>
+                                <button class="btn-action" title="Editar usuario" style="background:#2196f3;color:white;">Editar</button>
+                                <button class="btn-action" title="Eliminar usuario" style="background:#f44336;color:white;">Eliminar</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h3>Reportes Generales <span style="font-size:1em;">&#128202;</span></h3>
+                    <ul style="margin-bottom:15px;">
+                        <li>Informe Mensual <button class="btn-action" style="background:#673ab7;color:white;">Descargar</button></li>
+                        <li>Informe de Usuarios <button class="btn-action" style="background:#009688;color:white;">Descargar</button></li>
+                    </ul>
+                    <button class="btn-action" style="background:#607d8b;color:white;">Ver Estadísticas</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

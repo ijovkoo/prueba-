@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportClub - Usuario</title>
+    <link rel="stylesheet" href="12.css">
+</head>
+<body class="role-user">
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-izquierda">
+                <a href="../landagepagee/landajepage.html">
+                    <img src="../sport7.png" alt="Logo de la empresa" class="logo-img">
+                </a>
+            </div>
+            <div class="logo_placeholder" href="../sport7.png"></div>
+            <nav class="main-nav">
+                <a href="../landagepagee/landajepage.html" class="nav-item">Inicio</a> 
+                <a href="#" class="nav-item">Clases</a>
+                <a href="#" class="nav-item">Reservas</a>
+                <a href="#" class="nav-item">Mi Progreso</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">Editar Perfil</button>
+                <button class="btn btn-solid">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="dashboard-section">
+            <h1>Bienvenido a SportClub</h1>
+            <div class="grid-layout">
+                <div class="card">
+                    <h3>Mi Perfil</h3>
+                    <div class="flex-profile">
+                        <img src="Animación.jpeg" class="avatar" alt="Foto de Perfil" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h3> Juan Pérez</h3>
+                            <p>Miembro desde: Enero 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Progreso</h3>
+                    <div class="progress-circle">30%</div>
+                </div>
+                <div class="card card-full">
+                    <h3>Clases Disponibles</h3>
+                    <table class="data-table">
+                        <tr><td>Spinning</td><td>Lunes 18:00</td><td><button class="btn-action">Reservar</button></td></tr>
+                        <tr><td>CrossFit</td><td>Miércoles 10:00</td><td><button class="btn-action">Reservar</button></td></tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

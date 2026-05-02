@@ -20,19 +20,9 @@
             </div>
             <nav class="main-nav">
                 <a href="../landagepagee/landajepage.html" class="nav-item user-only">Inicio</a> 
-                <a href="#" class="nav-item user-only">Clases</a>
-                <a href="#" class="nav-item user-only">Reservas</a>
-                <a href="#" class="nav-item user-only">Mi Progreso</a>
-
-                <a href="#" class="nav-item coach-only">Inicio</a>
-                <a href="#" class="nav-item coach-only">Mis Alumnos</a>
-                <a href="#" class="nav-item coach-only">Mi Horario</a>
-                <a href="#" class="nav-item coach-only">Reportes</a>
-
-                <a href="#" class="nav-item admin-only">Inicio</a>
-                <a href="#" class="nav-item admin-only">Usuarios</a>
-                <a href="#" class="nav-item admin-only">Estadísticas</a>
-                <a href="#" class="nav-item admin-only">Configuración</a>
+                <a href="usuario.html" class="nav-item user-only">Dashboard Usuario</a>
+                <a href="coach.html" class="nav-item coach-only">Dashboard Coach</a>
+                <a href="admin.html" class="nav-item admin-only">Dashboard Admin</a>
             </nav>
             
             <div class="header-actions">
@@ -169,6 +159,8 @@
         if(role==='role-admin') document.getElementById('btn-admin').classList.add('active');
     });
     </script>
+<body onload="comparar()">
 
+<script src="../script.js"></script>
 </body>
 </html>

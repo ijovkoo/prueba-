@@ -22,15 +22,16 @@
                 
                 <div class="grupo-input">
                     <label>Correo Electrónico:</label>
-                    <input type="email" class="input-correo" placeholder="ejemplo@correo.cl" required>
+                    <input type="email" id="email" class="input-correo" placeholder="ejemplo@correo.cl" required>
                 </div>
 
                 <div class="grupo-input">
                     <label>Contraseña:</label>
-                    <input type="password" class="input-contrasena" placeholder="********" required>
+                    <input type="password" id="pass" class="input-contrasena" placeholder="********" required>
                 </div>
 
-                <button type="submit" class="boton-inicio-sesion">Iniciar Sesión</button>
+                <button type="button" onclick="validarEntrada()"  class="boton-inicio-sesion">Iniciar Sesión</button>
+                <p id="esta mal "></p>
             </form>
 
             <div class="seccion-links">
@@ -41,6 +42,6 @@
 
         </div>
     </div>
-
+<script src="code.js"></script>
 </body>
 </html>

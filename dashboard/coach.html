@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportClub - Coach</title>
+    <link rel="stylesheet" href="12.css">
+</head>
+<body class="role-coach">
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-izquierda">
+                <a href="../landagepagee/landajepage.html">
+                    <img src="../sport7.png" alt="Logo de la empresa" class="logo-img">
+                </a>
+            </div>
+            <div class="logo_placeholder" href="../sport7.png"></div>
+            <nav class="main-nav">
+                <a href="../landagepagee/landajepage.html" class="nav-item">Inicio</a>
+                <a href="#" class="nav-item">Mis Alumnos</a>
+                <a href="#" class="nav-item">Mi Horario</a>
+                <a href="#" class="nav-item">Reportes</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">Editar Perfil</button>
+                <button class="btn btn-solid">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="dashboard-section">
+            <h1>Panel de Entrenador</h1>
+            <p>Bienvenido, Coach [Nombre]</p>
+            <div class="grid-layout">
+                <div class="card">
+                    <h3>Mis Alumnos</h3>
+                    <table class="data-table">
+                        <tr><td>Alumno 1</td><td><button class="btn-action">Ver Progreso</button></td></tr>
+                        <tr><td>Alumno 2</td><td><button class="btn-action">Ver Progreso</button></td></tr>
+                    </table>
+                </div>
+                <div class="card card-full">
+                    <h3>Mi Horario</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Spinning</td><td>Futbol</td><td>CrossFit</td><td>-</td><td>Boxeo</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>
