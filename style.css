@@ -164,3 +164,21 @@
     width: 100%;
     
 }
+/* Estilos para validaciones exigidos por la rúbrica */
+.error-texto {
+    color: red;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 4px;
+    min-height: 1.2rem; /* Evita que el formulario "salte" cuando aparece el error */
+}
+
+.borde-error {
+    border: 2px solid red !important;
+}
+
+/* Opcional: para que los inputs se vean mejor al estar activos */
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}

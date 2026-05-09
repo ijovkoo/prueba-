@@ -18,7 +18,7 @@
                 </a>
             </div>
 
-            <form action="#" class="formulario-login">
+            <form id="formulario-login" class="formulario-login">
                 
                 <div class="grupo-input">
                     <label>Correo Electrónico:</label>
@@ -30,8 +30,9 @@
                     <input type="password" id="pass" class="input-contrasena" placeholder="********" required>
                 </div>
 
-                <button type="button" onclick="validarEntrada()"  class="boton-inicio-sesion">Iniciar Sesión</button>
-                <p id="esta mal "></p>
+                <button type="submit" class="boton-inicio-sesion">Iniciar Sesión</button>
+                
+                <p id="mensaje-error" style="margin-top: 10px; font-size: 14px; text-align: center;"></p>
             </form>
 
             <div class="seccion-links">
@@ -42,6 +43,6 @@
 
         </div>
     </div>
-<script src="code.js"></script>
+<script src="login.js"></script>
 </body>
 </html>

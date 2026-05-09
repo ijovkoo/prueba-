@@ -3,46 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pagina de registro</title>
+    <title>SportClub - Registro</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class ="cuerpo-pagina_reg">
-
-    <div class ="contenercentrado">
+<body class="cuerpo-pagina_reg">
+    <div class="contenercentrado">
         <div class="cuadro-formulario-card">
             <h3>Registrarse</h3>
-            <div class="logo-centrado    ">
+            <div class="logo-centrado">
                 <a href="landagepagee/landajepage.html">
                     <img src="sport7.png" alt="logo de la empresa">
                 </a>
             </div>
 
-            <form action="#" class=" formularioregistro">
-                <div class="grupodeinput" >
-                    <label>CORREO ELECTRONICO:</label>
-                    <input type="email" class="nombrecorre" placeholder="ejemplo@correo.cl" required>
+            <form id="formRegistro" class="formularioregistro">
+                <div class="grupodeinput">
+                    <label>Nombre completo:</label>
+                    <input type="text" class="nombrenombre" placeholder="Tu nombre completo">
+                    <small class="error-texto"></small>
                 </div>
                 <div class="grupodeinput">
-                    <label>contraseña:</label>
-                    <input type="password" class="nombrecontra" placeholder="°°°°°°" required>
+                    <label>Correo electrónico:</label>
+                    <input type="email" class="nombrecorre" placeholder="ejemplo@correo.cl">
+                    <small class="error-texto"></small>
                 </div>
-                <div class ="grupodeinput">
-                    <label for ="iddepor">¿Que deporte te gusta hacer?</label>
+                <div class="grupodeinput">
+                    <label>Contraseña:</label>
+                    <input type="password" class="nombrecontra" placeholder="Mínimo 8 caracteres">
+                    <small class="error-texto"></small>
+                </div>
+                <div class="grupodeinput">
+                    <label>Confirmar contraseña:</label>
+                    <input type="password" class="confirmarcontra" placeholder="Confirma tu contraseña">
+                    <small class="error-texto"></small>
+                </div>
+                <div class="grupodeinput">
+                    <label for="iddepor">¿Qué deporte te gusta hacer?</label>
                     <select class="nombredeporte" id="iddepor">
-                        <option value=""> Eliga su deporte</option>
-                        <option value="futbol">FUCHIBULL</option>
-                        <option value="basketball">BASKETBOL</option>
-                        <option value="volei">VOLEIBALL</option>
+                        <option value="">Elija su deporte</option>
+                        <option value="futbol">Fútbol</option>
+                        <option value="basketball">Básquetbol</option>
+                        <option value="volei">Vóleibol</option>
                         <option value="no me gusta nada">No me gusta nada</option>
                     </select>
                 </div>
-                <button typE="submit" class="boton">registrarsee</button>
+                <button type="submit" class="boton">Registrarse</button>
+                <div id="mensaje-error-api" style="text-align: center; margin-top: 10px;"></div>
             </form>
             <div class="links">
-                <a href="login.html" class="volverainiciar sesion">volver a iniciar sesion  </a>
+                <a href="login.html" class="volverainiciar sesion">Volver a iniciar sesión</a>
             </div>
         </div>
     </div> 
-
+    <script src="registro .js"></script>
 </body>
 </html>
