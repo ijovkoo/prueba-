@@ -3,86 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Deportiva - Peak Performance</title>
+    <title>SportClub — Supera tus límites</title>
+    <meta name="description" content="SportClub: entrenamiento profesional, planes a medida y una comunidad activa. Transforma tu cuerpo y tu vida.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="landag.css">
-    <style>
-        /* Estilos rápidos para el botón del Dashboard (puedes moverlos a tu landag.css) */
-        .seccion-dashboard-unico {
-            margin-top: 50px;
-            padding: 40px 20px;
-            text-align: center;
-            border-top: 1px solid #eee;
-        }
-
-        .btn-dashboard-total {
-            display: inline-block;
-            padding: 15px 40px;
-            background-color: #000;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 2px solid #000;
-            transition: all 0.3s ease;
-        }
-
-        .btn-dashboard-total:hover {
-            background-color: #fff;
-            color: #000;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-    </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <nav>
-            <a href="../login.html">Inicio sesión</a>
-            <a href="../registro.html">Registrarse</a>
-        </nav>
-        <div class="logo-placeholder">
-            <img src="../sport7.png" alt="Logo">
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="../sport7.png" alt="SportClub Logo">
+            </a>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#stats">Resultados</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="../login.html" class="btn-nav btn-nav-outline">Iniciar Sesión</a>
+                <a href="../registro.html" class="btn-nav btn-nav-solid">Registrarse</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <main class="contenedor-principal">
-        
-        <div class="columna-texto">
-            <div class="nombres-grandes">
-                <h1>SUPERA TUS LÍMITES</h1> 
-                <h2>Running Training Fitness</h2> 
-            </div>
-
-            <p class="descripcion-tienda">
-                "En SportClub, entendemos que cruzar la puerta del gimnasio es solo el primer paso de un viaje mucho más profundo. No estamos aquí simplemente para ofrecerte máquinas o pesas; estamos aquí porque creemos que el deporte es el motor que transforma tu cuerpo, despeja tu mente y redefine tu estilo de vida."
-            </p>
-
-            <div class="mensaje-motivacional">
-                <h3>Lo que nos hace diferentes:</h3>
-                    <ul>
-                        <li><strong>Guía Profesional:</strong> Entrenadores que cuidan tu técnica paso a paso.</li>
-                        <li><strong>Planes a Medida:</strong> Programas adaptados a tus metas y capacidades.</li>
-                        <li><strong>Entorno Premium:</strong> Tecnología y confort de última generación.</li>
-                        <li><strong>Comunidad Activa:</strong> Un ambiente diseñado para superarte sin límites.</li>
-                    </ul>
-            </div>
-
-            <a href="#" class="boton-accion">READ MORE</a>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
-
-        <div class="columna-imagen">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">🏆 #1 Club Deportivo</span>
+                <h1 class="hero-title">
+                    SUPERA TUS<br>
+                    <span class="gradient-text">LÍMITES</span>
+                </h1>
+                <p class="hero-subtitle">Running · Training · Fitness</p>
+                <p class="hero-desc">
+                    Transforma tu cuerpo, despeja tu mente y redefine tu estilo de vida con entrenamiento profesional y una comunidad que te impulsa.
+                </p>
+                <div class="hero-buttons">
+                    <a href="../registro.html" class="btn-hero btn-hero-primary">
+                        Empieza Ahora
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#nosotros" class="btn-hero btn-hero-ghost">Conocer Más</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-avatars">
+                        <div class="trust-avatar" style="background:#6f42c1;">JA</div>
+                        <div class="trust-avatar" style="background:#28a745;">MC</div>
+                        <div class="trust-avatar" style="background:#2196f3;">RL</div>
+                        <div class="trust-avatar" style="background:#e53935;">PS</div>
+                    </div>
+                    <span class="trust-text"><strong>+500</strong> miembros activos</span>
+                </div>
             </div>
+            <div class="hero-visual">
+                <div class="hero-card hero-card-1">
+                    <div class="card-icon">🏋️</div>
+                    <div class="card-info">
+                        <span class="card-label">Sesiones</span>
+                        <span class="card-value">1,240+</span>
+                    </div>
+                </div>
+                <div class="hero-card hero-card-2">
+                    <div class="card-icon">🔥</div>
+                    <div class="card-info">
+                        <span class="card-label">Calorías Quemadas</span>
+                        <span class="card-value">850K</span>
+                    </div>
+                </div>
+                <div class="hero-card hero-card-3">
+                    <div class="card-icon">⭐</div>
+                    <div class="card-info">
+                        <span class="card-label">Satisfacción</span>
+                        <span class="card-value">98%</span>
+                    </div>
+                </div>
+                <div class="hero-image-circle"></div>
+            </div>
+        </div>
+    </section>
 
-        <section class="seccion-dashboard-unico">
-            <p style="font-style: italic; color: #666; margin-bottom: 15px;">Panel de gestión interna</p>
-            <a href="../dashboard/1.html" class="btn-dashboard-total">
-                ENTRAR AL DASHBOARD
-            </a>
-        </section>
+    <!-- ===================== STATS BAR ===================== -->
+    <section class="stats-bar" id="stats">
+        <div class="stats-container">
+            <div class="stat-block">
+                <span class="stat-num">500+</span>
+                <span class="stat-lbl">Miembros Activos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-block">
+                <span class="stat-num">15+</span>
+                <span class="stat-lbl">Entrenadores</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-block">
+                <span class="stat-num">30+</span>
+                <span class="stat-lbl">Clases Semanales</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-block">
+                <span class="stat-num">98%</span>
+                <span class="stat-lbl">Satisfacción</span>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <!-- ===================== NOSOTROS ===================== -->
+    <section class="about" id="nosotros">
+        <div class="about-container">
+            <div class="about-badge-wrap">
+                <span class="section-badge">¿QUIÉNES SOMOS?</span>
+            </div>
+            <h2 class="section-title">Más que un gimnasio,<br><span class="gradient-text">una experiencia</span></h2>
+            <p class="section-desc">
+                En SportClub entendemos que cruzar la puerta del gimnasio es solo el primer paso de un viaje mucho más profundo. No estamos aquí simplemente para ofrecerte máquinas o pesas; estamos aquí porque creemos que el deporte es el motor que transforma tu cuerpo, despeja tu mente y redefine tu estilo de vida.
+            </p>
+        </div>
+    </section>
 
+    <!-- ===================== SERVICIOS ===================== -->
+    <section class="services" id="servicios">
+        <div class="services-container">
+            <div class="about-badge-wrap">
+                <span class="section-badge">NUESTROS SERVICIOS</span>
+            </div>
+            <h2 class="section-title">Lo que nos hace <span class="gradient-text">diferentes</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Guía Profesional</h3>
+                    <p>Entrenadores certificados que cuidan tu técnica paso a paso y te acompañan en cada sesión.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Planes a Medida</h3>
+                    <p>Programas personalizados adaptados a tus metas, nivel y capacidades físicas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Entorno Premium</h3>
+                    <p>Equipamiento de última generación y espacios diseñados para tu máximo rendimiento.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Comunidad Activa</h3>
+                    <p>Un ambiente motivador diseñado para superarte sin límites junto a personas como tú.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta">
+        <div class="cta-container">
+            <h2>¿Listo para transformar tu vida?</h2>
+            <p>Únete a la comunidad SportClub y comienza tu viaje hacia una versión mejor de ti.</p>
+            <div class="cta-buttons">
+                <a href="../registro.html" class="btn-hero btn-hero-primary">Registrarse Gratis</a>
+                <a href="../login.html" class="btn-hero btn-hero-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff;">Iniciar Sesión</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../sport7.png" alt="SportClub" class="footer-logo">
+                <p>Transformando vidas a través del deporte desde 2024.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+            </div>
+            <div class="footer-links">
+                <h4>Acceso</h4>
+                <a href="../login.html">Iniciar Sesión</a>
+                <a href="../registro.html">Registrarse</a>
+                <a href="../dashboard/1.html">Dashboard</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SportClub. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu toggle
+        const toggle = document.getElementById('menuToggle');
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.toggle('open');
+                document.querySelector('.nav-actions').classList.toggle('open');
+                toggle.classList.toggle('active');
+            });
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Animate on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.service-card, .stat-block, .about-container, .hero-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
