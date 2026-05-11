@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SportClub - Panel de Entrenador</title>
     <meta name="description" content="Panel del entrenador para gestionar alumnos y horarios en SportClub">
-    <link rel="stylesheet" href="12.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
 </head>
-
 <body class="role-coach">
 
     <!-- ===================== HEADER / NAVEGACIÓN ===================== -->
     <header class="main-header">
         <div class="container header-flex">
             <div class="logo-izquierda">
-                <a href="../landagepagee/landajepage.html">
-                    <img src="../sport7.png" alt="Logo de la empresa" class="logo-img">
+                <a href="../landing.html">
+                    <img src="../../img/sport7.png" alt="Logo de la empresa" class="logo-img">
                 </a>
             </div>
             <div class="logo_placeholder"></div>
             <nav class="main-nav">
-                <a href="../landagepagee/landajepage.html" class="nav-item">Inicio</a>
+                <a href="../landing.html" class="nav-item">Inicio</a>
                 <a href="#alumnos" class="nav-item nav-active">Mis Alumnos</a>
                 <a href="#horario" class="nav-item">Mi Horario</a>
                 <a href="#perfil" class="nav-item">Mi Perfil</a>
@@ -41,8 +39,7 @@
             <div class="modulo-header">
                 <div>
                     <h1>Panel de Entrenador &#127939;</h1>
-                    <p class="modulo-descripcion" id="coach-bienvenida">Bienvenido, Coach. Gestiona tu equipo y revisa
-                        tu agenda.</p>
+                    <p class="modulo-descripcion" id="coach-bienvenida">Bienvenido, Coach. Gestiona tu equipo y revisa tu agenda.</p>
                 </div>
             </div>
 
@@ -53,6 +50,7 @@
                     <div class="coach-perfil-contenido">
                         <div class="coach-avatar-wrapper">
                             <div class="coach-avatar-circle" id="coach-avatar-iniciales">
+                                <!-- Iniciales del coach generadas por JS -->
                                 <span>?</span>
                             </div>
                             <span class="badge badge-coach" style="margin-top:8px;">coach</span>
@@ -89,8 +87,7 @@
                 <div class="card card-full" id="alumnos">
                     <div class="card-header-flex">
                         <h3>&#127891; Mis Alumnos</h3>
-                        <input type="text" id="buscar-alumno" placeholder="🔍 Buscar alumno..."
-                            class="search-input-admin" style="max-width:280px;">
+                        <input type="text" id="buscar-alumno" placeholder="🔍 Buscar alumno..." class="search-input-admin" style="max-width:280px;">
                     </div>
                     <div class="tabla-scroll-wrapper">
                         <table class="data-table" id="tabla-alumnos">
@@ -177,8 +174,7 @@
                         </div>
                         <div class="grupo-campo">
                             <label for="coach-input-email">Email</label>
-                            <input type="email" id="coach-input-email" placeholder="Tu email" disabled
-                                style="background:#e9ecef;">
+                            <input type="email" id="coach-input-email" placeholder="Tu email" disabled style="background:#e9ecef;">
                         </div>
                         <div class="grupo-campo">
                             <label for="coach-input-fecha">Fecha de nacimiento</label>
@@ -218,7 +214,6 @@
         </section>
     </main>
 
-    <script src="../coach.js"></script>
+    <script src="../../js/coach.js"></script>
 </body>
-
 </html>

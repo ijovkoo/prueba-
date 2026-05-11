@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SportClub - Gestión de Usuarios</title>
     <meta name="description" content="Panel de administración para gestionar los usuarios del sistema SportClub">
-    <link rel="stylesheet" href="12.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
 </head>
 <body class="role-admin">
 
@@ -13,13 +13,13 @@
     <header class="main-header">
         <div class="container header-flex">
             <div class="logo-izquierda">
-                <a href="../landagepagee/landajepage.html">
-                    <img src="../sport7.png" alt="Logo de la empresa" class="logo-img">
+                <a href="../landing.html">
+                    <img src="../../img/sport7.png" alt="Logo de la empresa" class="logo-img">
                 </a>
             </div>
             <div class="logo_placeholder"></div>
             <nav class="main-nav">
-                <a href="../landagepagee/landajepage.html" class="nav-item">Inicio</a>
+                <a href="../landing.html" class="nav-item">Inicio</a>
                 <a href="#" class="nav-item nav-active" id="nav-usuarios">Usuarios</a>
                 <a href="#" class="nav-item">Estadísticas</a>
                 <a href="#" class="nav-item">Configuración</a>
@@ -67,7 +67,6 @@
                             </tr>
                         </thead>
                         <tbody id="cuerpo-tabla-usuarios">
-                            <!-- Se llena dinámicamente con JS -->
                             <tr>
                                 <td colspan="6" style="text-align:center; padding:30px; opacity:0.7;">
                                     Cargando usuarios...
@@ -86,25 +85,21 @@
                 </div>
 
                 <form id="form-nuevo-usuario" novalidate>
-                    <!-- Campo oculto para edición -->
                     <input type="hidden" id="edit-user-id" value="">
 
                     <div class="form-grid">
-                        <!-- Nombre completo -->
                         <div class="grupo-campo">
                             <label for="campo-nombre">Nombre completo</label>
                             <input type="text" id="campo-nombre" placeholder="Ej: Juan Pérez López" autocomplete="name">
                             <small class="error-texto" id="error-nombre"></small>
                         </div>
 
-                        <!-- Email -->
                         <div class="grupo-campo">
                             <label for="campo-email">Email</label>
                             <input type="email" id="campo-email" placeholder="ejemplo@correo.cl" autocomplete="email">
                             <small class="error-texto" id="error-email"></small>
                         </div>
 
-                        <!-- Rol -->
                         <div class="grupo-campo">
                             <label for="campo-rol">Rol</label>
                             <select id="campo-rol" class="select-rol">
@@ -116,14 +111,12 @@
                             <small class="error-texto" id="error-rol"></small>
                         </div>
 
-                        <!-- Contraseña -->
                         <div class="grupo-campo" id="grupo-password">
                             <label for="campo-password">Contraseña</label>
                             <input type="password" id="campo-password" placeholder="Mínimo 8 caracteres" autocomplete="new-password">
                             <small class="error-texto" id="error-password"></small>
                         </div>
 
-                        <!-- Confirmar contraseña -->
                         <div class="grupo-campo" id="grupo-confirm-password">
                             <label for="campo-confirmar">Confirmar contraseña</label>
                             <input type="password" id="campo-confirmar" placeholder="Repite la contraseña" autocomplete="new-password">
@@ -131,10 +124,8 @@
                         </div>
                     </div>
 
-                    <!-- Mensaje general -->
                     <div id="mensaje-form" class="mensaje-form"></div>
 
-                    <!-- Botones del formulario -->
                     <div class="form-botones">
                         <button type="button" id="btn-cancelar-form" class="btn btn-outline">Cancelar</button>
                         <button type="submit" id="btn-guardar" class="btn btn-solid">Guardar Usuario</button>
@@ -157,6 +148,6 @@
         </div>
     </div>
 
-    <script src="../admin.js"></script>
+    <script src="../../js/admin.js"></script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SportClub</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="cuerpo-pagina">
+
+    <div class="contenedor-centrado-pantalla">
+        
+        <div class="cuadro-formulario-card">
+            
+            <div class="logo-centrado">
+                <a href="landing.html">
+                    <img src="../img/sport7.png" alt="Logo de la empresa">
+                </a>
+            </div>
+
+            <form id="formulario-login" class="formulario-login">
+                
+                <div class="grupo-input">
+                    <label>Correo Electrónico:</label>
+                    <input type="email" id="email" class="input-correo" placeholder="ejemplo@correo.cl" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label>Contraseña:</label>
+                    <input type="password" id="pass" class="input-contrasena" placeholder="********" required>
+                </div>
+
+                <button type="submit" class="boton-inicio-sesion">Iniciar Sesión</button>
+                
+                <p id="mensaje-error" style="margin-top: 10px; font-size: 14px; text-align: center;"></p>
+            </form>
+
+            <div class="seccion-links">
+                <a href="recuperar.html" target="_blank" class="link-recuperar-contrasena">Recuperar contraseña</a>
+                <br>
+                <a href="registro.html" target="_blank" class="link-registrarse">Registrarse</a>
+            </div>
+
+        </div>
+    </div>
+<script src="../js/login.js"></script>
+</body>
+</html>
